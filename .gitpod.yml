@@ -3,7 +3,6 @@ image: python:3.10
 before_script:
  - pip install --upgrade pip
  - pip install pandas
- - pip install matplotlib
 tasks:
   - init: pip install pyperclip # runs during prebuild
     command: echo 'start script'
