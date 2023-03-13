@@ -1,11 +1,10 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 image: python:3.10
-before_script:
- - pip install --upgrade pip
- - pip install pandas
 tasks:
-  - init: pip install pyperclip # runs during prebuild
-    command: echo 'start script'
+ - before: pip install --upgrade pip
+   init: pip install pyperclip # runs during prebuild
+ - init: pip install pandas  
+   command: echo 'start script'
   
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
